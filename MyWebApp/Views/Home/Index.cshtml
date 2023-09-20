@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    string name = "thien";
+    int value = 3;
+    void RenderName(string name)
+    {
+        <p><strong>@name</strong></p>
+    }
+    RenderName("Biden");
+    RenderName("Elon Musk");
+}
+@{
+    if(value > 0)
+    {
+        <h1>This value greater than 0</h1>
+    }
+}
+
+<h1>@name</h1>
+<h2></h2>
+<p>Time: @DateTime.Now</p>
