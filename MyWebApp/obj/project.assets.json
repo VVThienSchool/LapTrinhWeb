@@ -10691,11 +10691,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\LtWeb\\MyWebApp\\MyWebApp.csproj",
+      "projectUniqueName": "D:\\LtWeb\\Code\\MyWebApp\\MyWebApp.csproj",
       "projectName": "MyWebApp",
-      "projectPath": "D:\\LtWeb\\MyWebApp\\MyWebApp.csproj",
+      "projectPath": "D:\\LtWeb\\Code\\MyWebApp\\MyWebApp.csproj",
       "packagesPath": "C:\\Users\\Thien\\.nuget\\packages\\",
-      "outputPath": "D:\\LtWeb\\MyWebApp\\obj\\",
+      "outputPath": "D:\\LtWeb\\Code\\MyWebApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Thien\\AppData\\Roaming\\NuGet\\NuGet.Config",
