@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using MyWebApp.Data;
 using MyWebApp.Service;
 using MyWebApp.ServiceImpl;
 
@@ -8,7 +9,16 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<IBufferedFileUploadService, BufferedFileUploadLocalService>();
 
+builder.Services.AddDbContext<SchoolContext>(options => options
+.UseSqlServer(builder.Configuration.GetConnectionString("MyWebAppContext")));
+
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    DbInitalizer.Initialize(services);
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
